@@ -1,0 +1,22 @@
+# Ignore everything at the repo root by default.
+/*
+
+# Keep repo metadata files.
+!/.gitignore
+!/README.md
+
+# Track only the selected config directories.
+!/atuin/
+!/tmux/
+!/nvim/
+!/ghostty/
+!/atuin/**
+!/tmux/**
+!/nvim/**
+!/ghostty/**
+
+# Ignore local-only or generated files inside tracked directories.
+/atuin/atuin-receipt.json
+/nvim/.claude/
+/nvim/.git/
+**/.DS_Store
