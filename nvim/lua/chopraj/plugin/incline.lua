@@ -13,7 +13,7 @@ return {
                 },
                 render = function(props)
                     local bufname = vim.api.nvim_buf_get_name(props.buf)
-                    local filename = vim.fn.fnamemodify(bufname, ":t")
+                    local filename = vim.fn.fnamemodify(bufname, ":.")
                     if filename == '' then filename = '[No Name]' end
 
                     local ext = vim.fn.fnamemodify(bufname, ":e")
