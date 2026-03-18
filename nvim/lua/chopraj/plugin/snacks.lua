@@ -48,16 +48,6 @@ return {
 				end,
 				desc = "Grep",
 			},
-			{
-				"<leader>fl",
-				function()
-					require("snacks").picker.lines({
-						layout = "ivy",
-						jump = { close = false },
-					})
-				end,
-				desc = "Find Lines in Buffer",
-			},
 		},
 	},
 }
