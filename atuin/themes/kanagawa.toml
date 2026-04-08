@@ -1,0 +1,13 @@
+[theme]
+name = "kanagawa"
+
+# Kanagawa Wave palette — muted, warm-leaning with signature crystal blue.
+# Color names refer to the official Kanagawa palette.
+[colors]
+AlertError = "#C34043"  # autumnRed
+AlertWarn  = "#FF9E3B"  # roninYellow
+AlertInfo  = "#98BB6C"  # springGreen
+Guidance   = "#7E9CD8"  # crystalBlue
+Annotation = "#727169"  # fujiGray
+Important  = "#DCA561"  # autumnYellow
+Muted      = "#727169"  # fujiGray
