@@ -7,6 +7,7 @@ return {
 			indent = { enabled = false },
 			input = { enabled = true },
 			quickfile = { enabled = true },
+			explorer = { enabled = true, replace_netrw = false },
 			dashboard = {
 				enabled = true,
 				sections = {
@@ -31,6 +32,22 @@ return {
 					require("snacks").picker.colorschemes({ layout = "ivy" })
 				end,
 				desc = "Pick Color Schemes",
+			},
+
+			-- File tree sidebar
+			{
+				"<leader>b",
+				function()
+					Snacks.explorer()
+				end,
+				desc = "Toggle file tree (sidebar)",
+			},
+			{
+				"<leader>e",
+				function()
+					Snacks.explorer.reveal()
+				end,
+				desc = "Focus file tree & reveal current file",
 			},
 
 			-- Snacks Picker

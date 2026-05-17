@@ -4,29 +4,6 @@ vim.g.maplocalleader = " "
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", { desc = "moves lines down in visual selection" })
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", { desc = "moves lines up in visual selection" })
 
--- Leader-based editing shortcuts under <leader>c to avoid terminal/super-key issues.
-vim.keymap.set("n", "<leader>cz", "u", { desc = "Undo" })
-vim.keymap.set("i", "<leader>cz", "<C-o>u", { desc = "Undo" })
-
-vim.keymap.set("n", "<leader>cZ", "<cmd>redo<cr>", { desc = "Redo" })
-vim.keymap.set("i", "<leader>cZ", "<C-o><cmd>redo<cr>", { desc = "Redo" })
-
-vim.keymap.set("n", "<leader>cs", "<cmd>w<cr>", { desc = "Save file" })
-vim.keymap.set("i", "<leader>cs", "<C-o><cmd>w<cr>", { desc = "Save file" })
-
-vim.keymap.set("n", "<leader>ca", "ggVG", { desc = "Select all" })
-vim.keymap.set("i", "<leader>ca", "<Esc>ggVG", { desc = "Select all" })
-
-vim.keymap.set("v", "<leader>cc", '"+y', { desc = "Copy to clipboard" })
-vim.keymap.set("n", "<leader>cc", '"+yy', { desc = "Copy line to clipboard" })
-
-vim.keymap.set("n", "<leader>cv", '"+p', { desc = "Paste from clipboard" })
-vim.keymap.set("v", "<leader>cv", '"+p', { desc = "Paste from clipboard" })
-vim.keymap.set("i", "<leader>cv", "<C-r>+", { desc = "Paste from clipboard" })
-
-vim.keymap.set("v", "<leader>cx", '"+x', { desc = "Cut to clipboard" })
-vim.keymap.set("n", "<leader>cx", '"+dd', { desc = "Cut line to clipboard" })
-
 -- Option+Backspace to delete word backward in insert mode
 vim.keymap.set("i", "<M-BS>", "<C-w>", { desc = "Delete word backward" })
 
