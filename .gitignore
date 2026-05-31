@@ -10,13 +10,23 @@
 !/tmux/
 !/nvim/
 !/ghostty/
+!/lumen/
+!/neru/
+!/zed/
+!/borders/
 !/atuin/**
 !/tmux/**
 !/nvim/**
 !/ghostty/**
+!/lumen/**
+!/neru/**
+!/zed/**
+!/borders/**
 
 # Ignore local-only or generated files inside tracked directories.
 /atuin/atuin-receipt.json
+/zed/conversations/
+/zed/prompts/
 /nvim/.claude/
 /nvim/.git/
 **/.DS_Store

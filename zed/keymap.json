@@ -1,0 +1,88 @@
+[
+  {
+    "context": "Workspace",
+    "bindings": {
+      "cmd-b": "workspace::ToggleLeftDock",
+      "cmd-shift-g": "git_panel::ToggleFocus"
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "cmd-d": "editor::GoToDefinition"
+    }
+  },
+  {
+    "context": "Editor",
+    "unbind": {
+      "cmd-]": "editor::Indent"
+    }
+  },
+  {
+    "context": "Editor",
+    "unbind": {
+      "cmd-[": "editor::Outdent"
+    }
+  },
+  {
+    "bindings": {
+      "cmd-]": "window::ShowNextWindowTab"
+    }
+  },
+  {
+    "bindings": {
+      "cmd-[": "window::ShowPreviousWindowTab"
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "cmd-[": "workspace::ActivatePreviousPane"
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "cmd-]": "workspace::ActivateNextPane"
+    }
+  },
+  {
+    "context": "KeymapEditor",
+    "unbind": {
+      "cmd-shift-c": "keymap_editor::CopyContext"
+    }
+  },
+  {
+    "unbind": {
+      "cmd-shift-c": "collab_panel::ToggleFocus"
+    }
+  },
+  {
+    "context": "Editor",
+    "unbind": {
+      "cmd-'": "editor::ToggleSelectedDiffHunks"
+    }
+  },
+  {
+    "bindings": {
+      "cmd-'": "editor::CollapseAllDiffHunks"
+    }
+  },
+  {
+    "bindings": {
+      "cmd-shift-c": "editor::CopyRelativePath"
+    }
+  },
+  {
+    "context": "VimControl && !menu",
+    "bindings": {
+      "space m": "editor::ToggleFold"
+    }
+  },
+  {
+    "context": "VimControl && !menu",
+    "unbind": {
+      "z a": "editor::ToggleFold"
+    }
+  }
+]
