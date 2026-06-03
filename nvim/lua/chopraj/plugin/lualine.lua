@@ -58,7 +58,15 @@ return {
         local filename = {
             'filename',
             file_status = true,
-            path = 0,
+            path = 1, -- relative path; trimmed below to the last few segments
+            fmt = function(str)
+                -- Keep only the filename + its two parent dirs (e.g. .../components/ui/Button.tsx)
+                local parts = vim.split(str, "/", { plain = true })
+                if #parts <= 3 then
+                    return str
+                end
+                return ".../" .. table.concat({ parts[#parts - 2], parts[#parts - 1], parts[#parts] }, "/")
+            end,
         }
 
         local branch = {'branch', icon = {'', color={fg='#A6D4DE'}}, '|'}
