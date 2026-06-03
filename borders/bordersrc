@@ -1,0 +1,14 @@
+#!/bin/bash
+
+options=(
+    style=uniform
+    width=6.0
+    hidpi=off
+    active_color=0xff8fd957
+    # active_color=0xffff0000
+    inactive_color=0x00000000
+)
+
+borders "${options[@]}"
+
+# pkill borders; nohup bash ~/.config/borders/bordersrc >/dev/null 2>&1 & disown

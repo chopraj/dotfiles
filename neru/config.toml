@@ -1,0 +1,52 @@
+[general]
+passthrough_unbounded_keys = true
+
+[hotkeys]
+"Primary+Space" = "hints"
+"Primary+Shift+C" = "__disabled__"
+"Primary+Shift+J" = "recursive_grid"
+"Primary+Shift+S" = "scroll"
+
+[hints]
+enabled = true
+hint_characters = "asdfghklru"
+
+[hints.ui]
+font_family = "Berkeley Mono"
+
+[hints.hotkeys]
+"Space" = ["action left_click", "idle"]
+
+[scroll.hotkeys]
+"Space" = ["action left_click", "idle"]
+
+[grid]
+enabled = false
+
+# 4x6 recursive grid (keyboard-position layout)
+[recursive_grid]
+grid_cols = 6
+grid_rows = 4
+keys = "135680qetyipadghk;zcbn,/"
+
+min_size_height = 1
+min_size_width = 1
+max_depth = 10
+
+[recursive_grid.animation]
+enabled = true
+duration_ms = 50
+
+[recursive_grid.ui]
+font_size = 14                                                    # bigger cell labels (default 10)
+line_color = { light = "#B3465FBC", dark = "#B36E82D6" }          # default indigo grid lines, ~70% opacity
+label_background = true                                           # solid pill behind each label
+label_background_color = { light = "#C9D0EF", dark = "#0A1338" }  # soft lavender pill (light), default navy (dark)
+
+[recursive_grid.hotkeys]
+"Up" = "action move_mouse_relative --dx=0 --dy=-25"
+"Down" = "action move_mouse_relative --dx=0 --dy=25"
+"Left" = "action move_mouse_relative --dx=-25 --dy=0"
+"Right" = "action move_mouse_relative --dx=25 --dy=0"
+
+"Space" = ["action left_click", "idle"]
