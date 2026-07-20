@@ -7,7 +7,11 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
-    "minimum_contrast_for_highlights": 40.0,
+    "format_on_save": "on",
+    "excerpt_context_lines": 3,
+    "expand_excerpt_lines": 7,
+    "vertical_scroll_margin": 50.0,
+    "minimum_contrast_for_highlights": 80.0,
     "diff_view_style": "split",
     "buffer_font_weight": 400.0,
     "preview_tabs": {
@@ -30,7 +34,7 @@
         "toggle_relative_line_numbers": false,
         "use_system_clipboard": "never",
     },
-    "tab_size": 4,
+    "tab_size": 2,
     "relative_line_numbers": "disabled",
     "toolbar": {
         "agent_review": false,
@@ -44,9 +48,9 @@
         "runnables": false,
         "min_line_number_digits": 3,
     },
-    "hover_popover_delay": 0,
+    "hover_popover_delay": 100,
     "mouse_wheel_zoom": false,
-    "scroll_beyond_last_line": "vertical_scroll_margin",
+    "scroll_beyond_last_line": "off",
     "which_key": {
         "delay_ms": 100,
         "enabled": true,
@@ -54,7 +58,7 @@
     "proxy": "",
     "file_finder": {
         "include_ignored": "all",
-        "modal_max_width": "small",
+        "modal_max_width": "medium",
     },
     "use_smartcase_search": false,
     "active_pane_modifiers": {
@@ -72,7 +76,7 @@
         "git_status": true,
     },
     "tab_bar": {
-        "show_pinned_tabs_in_separate_row": false,
+        "show_pinned_tabs_in_separate_row": true,
         "show_tab_bar_buttons": false,
         "show_nav_history_buttons": false,
         "show": true,
@@ -127,12 +131,17 @@
         "dock": "left",
     },
     "git_panel": {
+        "group_by": "none",
+        "tree_view": true,
         "show_count_badge": true,
         "fallback_branch_name": "main",
         "dock": "left",
     },
     "agent_servers": {
         "claude-acp": {
+            "default_config_options": {
+                "mode": "bypassPermissions",
+            },
             "favorite_config_option_values": {
                 "effort": ["max"],
             },
@@ -175,8 +184,8 @@
     "buffer_font_size": 15.0,
     "theme": {
         "mode": "dark",
-        "light": "Kanso Pearl",
-        "dark": "Kanagawa Wave - No Italics",
+        "light": "GitHub Light",
+        "dark": "Kanagawa Wave",
     },
     "theme_overrides": {
         "Vague": {
@@ -185,6 +194,9 @@
             "editor.subheader.background": "#2a2d36",
         },
         "Kanso Ink (Borderless + No italics)": {
+            "editor.subheader.background": "#2a2d36",
+        },
+        "Kanagawa Wave Blur": {
             "editor.subheader.background": "#2a2d36",
         },
     },

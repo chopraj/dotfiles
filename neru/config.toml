@@ -25,9 +25,9 @@ enabled = false
 
 # 4x6 recursive grid (keyboard-position layout)
 [recursive_grid]
-grid_cols = 6
-grid_rows = 4
-keys = "135680qetyipadghk;zcbn,/"
+grid_cols = 2
+grid_rows = 2
+keys = "dkfj"
 
 min_size_height = 1
 min_size_width = 1
