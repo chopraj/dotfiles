@@ -1,7 +1,22 @@
 return {
   {
-    "rebelot/kanagawa.nvim",
+    "webhooked/kanso.nvim",
+    lazy = false,
     priority = 1000,
+    config = function()
+      require("kanso").setup({
+        background = {
+          dark = "zen",
+          light = "pearl",
+        },
+      })
+
+      vim.cmd("colorscheme kanso-zen")
+    end,
+  },
+  {
+    "rebelot/kanagawa.nvim",
+    priority = 900,
     config = function()
       require('kanagawa').setup({
         compile = false,
@@ -39,11 +54,9 @@ return {
   },
   {
     "vague-theme/vague.nvim",
-    lazy = false,
-    priority = 1000,
+    priority = 900,
     config = function()
       require("vague").setup({})
-      vim.cmd("colorscheme vague")
     end,
   },
 }
