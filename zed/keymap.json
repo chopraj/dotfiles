@@ -84,5 +84,33 @@
     "unbind": {
       "z a": "editor::ToggleFold"
     }
+  },
+  {
+    "bindings": {
+      "cmd-shift-r": "editor::RestartLanguageServer"
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "cmd-shift-d": "editor::GoToDefinitionSplit"
+    }
+  },
+  {
+    "context": "VimControl && !menu",
+    "unbind": {
+      "ctrl-w ctrl-]": "editor::GoToDefinitionSplit"
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "cmd-shift-u": "project_panel::CollapseAllEntries"
+    }
+  },
+  {
+    "bindings": {
+      "cmd-shift-u": "picker::ToMultiBuffer"
+    }
   }
 ]
