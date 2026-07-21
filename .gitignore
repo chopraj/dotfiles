@@ -14,6 +14,7 @@
 !/neru/
 !/zed/
 !/borders/
+!/codex/
 !/atuin/**
 !/tmux/**
 !/nvim/**
@@ -22,6 +23,10 @@
 !/neru/**
 !/zed/**
 !/borders/**
+
+# Track only Codex's declarative config; keep local state and backups ignored.
+/codex/*
+!/codex/config.toml
 
 # Ignore local-only or generated files inside tracked directories.
 /atuin/atuin-receipt.json
