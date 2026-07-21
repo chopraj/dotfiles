@@ -1,0 +1,226 @@
+model = "gpt-5.6-sol"
+model_reasoning_effort = "max"
+plan_mode_reasoning_effort = "max"
+personality = "pragmatic"
+service_tier = "fast"
+approvals_reviewer = "user"
+
+notify = ["/Users/rajchopra/.codex/computer-use/Codex Computer Use.app/Contents/SharedSupport/SkyComputerUseClient.app/Contents/MacOS/SkyComputerUseClient", "turn-ended"]
+
+[projects."/Users/rajchopra/developer/thorin"]
+trust_level = "trusted"
+
+[projects."/Users/rajchopra/.config/nvim"]
+trust_level = "trusted"
+
+[projects."/Users/rajchopra/developer/sitethorin"]
+trust_level = "trusted"
+
+[projects."/Users/rajchopra/developer/investment-retro"]
+trust_level = "trusted"
+
+[projects."/Users/rajchopra/roomba"]
+trust_level = "trusted"
+
+[projects."/Users/rajchopra"]
+trust_level = "trusted"
+
+[projects."/Users/rajchopra/.config/tmux"]
+trust_level = "trusted"
+
+[projects."/Users/rajchopra/.config"]
+trust_level = "trusted"
+
+[projects."/Users/rajchopra/Documents/Codex/2026-06-30/there-s-a-uh-github-action"]
+trust_level = "trusted"
+
+[notice]
+hide_gpt5_1_migration_prompt = true
+"hide_gpt-5.1-codex-max_migration_prompt" = true
+hide_full_access_warning = true
+
+[notice.model_migrations]
+"gpt-5.1-codex-max" = "gpt-5.2-codex"
+"gpt-5.3-codex" = "gpt-5.4"
+"gpt-5.4" = "gpt-5.5"
+
+[features]
+shell_snapshot = true
+js_repl = false
+memories = true
+
+hooks = true
+[tui]
+vim_mode_default = true
+status_line = ["model-with-reasoning", "context-remaining", "current-dir", "five-hour-limit", "git-branch", "branch-changes", "task-progress"]
+theme = "monokai-extended-bright"
+terminal_title = ["spinner", "project", "status", "thread", "git-branch", "model", "task-progress"]
+status_line_use_colors = true
+
+[tui.model_availability_nux]
+"gpt-5.5" = 4
+"gpt-5.6-sol" = 4
+
+[plugins."github@openai-curated"]
+enabled = true
+
+[plugins."browser@openai-bundled"]
+enabled = false
+
+[plugins."typescript-lsp@claude-plugins-official"]
+enabled = false
+
+[plugins."documents@openai-primary-runtime"]
+enabled = false
+
+[plugins."pdf@openai-primary-runtime"]
+enabled = false
+
+[plugins."spreadsheets@openai-primary-runtime"]
+enabled = false
+
+[plugins."presentations@openai-primary-runtime"]
+enabled = false
+
+[plugins."computer-use@openai-bundled"]
+enabled = false
+
+[plugins."chrome@openai-bundled"]
+enabled = false
+
+[plugins."template-creator@openai-primary-runtime"]
+enabled = true
+
+[plugins."datadog@openai-curated"]
+enabled = true
+
+[plugins."notion@openai-curated"]
+enabled = true
+
+[plugins."linear@openai-curated"]
+enabled = true
+
+[marketplaces.openai-bundled]
+last_updated = "2026-07-19T20:22:30Z"
+source_type = "local"
+source = "/Users/rajchopra/.codex/.tmp/bundled-marketplaces/openai-bundled"
+
+[marketplaces.claude-plugins-official]
+last_updated = "2026-07-21T00:54:21Z"
+last_revision = "9ddfad2e999789e0220cacaf359b64dd873e7d72"
+source_type = "git"
+source = "https://github.com/anthropics/claude-plugins-official.git"
+
+[marketplaces.openai-primary-runtime]
+last_updated = "2026-07-01T12:15:31Z"
+source_type = "local"
+source = "/Users/rajchopra/.cache/codex-runtimes/codex-primary-runtime/plugins/openai-primary-runtime"
+
+[mcp_servers.node_repl]
+args = []
+command = "/Applications/Codex.app/Contents/Resources/cua_node/bin/node_repl"
+startup_timeout_sec = 120
+
+[mcp_servers.node_repl.env]
+NODE_REPL_NATIVE_PIPE_CONNECT_TIMEOUT_MS = "1000"
+NODE_REPL_NODE_MODULE_DIRS = "/Applications/Codex.app/Contents/Resources/cua_node/lib/node_modules"
+NODE_REPL_NODE_PATH = "/Applications/Codex.app/Contents/Resources/cua_node/bin/node"
+NODE_REPL_TRUSTED_CODE_PATHS = "/Users/rajchopra/.codex"
+CODEX_HOME = "/Users/rajchopra/.codex"
+NODE_REPL_TRUSTED_BROWSER_CLIENT_SHA256S = "60e4902788f207f88fd09344dfeafe07769488bdb2924bbb12b322c3b9d2b999"
+BROWSER_USE_AVAILABLE_BACKENDS = "chrome,iab"
+NODE_REPL_INSTRUCTIONS_USE_CASE_BROWSER = "Control the in-app browser in conjunction with the Browser Plugin."
+NODE_REPL_INSTRUCTIONS_USE_CASE_CHROME = "Control the Chrome browser in conjunction with the Chrome Plugin. Prefer this method of controlling Chrome over alternatives (such as Computer Use) unless the user explicitly mentions an alternative."
+BROWSER_USE_CODEX_APP_BUILD_FLAVOR = "prod"
+BROWSER_USE_CODEX_APP_VERSION = "26.623.101652"
+CODEX_CLI_PATH = "/Applications/Codex.app/Contents/Resources/codex"
+
+[[skills.config]]
+path = "/Users/rajchopra/developer/thorin/.agents/skills/comment-review/SKILL.md"
+enabled = false
+
+[[skills.config]]
+path = "/Users/rajchopra/developer/thorin/.agents/skills/linear-doctor/SKILL.md"
+enabled = false
+
+[[skills.config]]
+path = "/Users/rajchopra/developer/thorin/.agents/skills/devx-cleanup/SKILL.md"
+enabled = false
+
+[[skills.config]]
+path = "/Users/rajchopra/developer/thorin/.agents/skills/implement/SKILL.md"
+enabled = false
+
+[[skills.config]]
+path = "/Users/rajchopra/developer/thorin/.agents/skills/eval-report/SKILL.md"
+enabled = false
+
+[[skills.config]]
+path = "/Users/rajchopra/developer/thorin/.agents/skills/oneshot/SKILL.md"
+enabled = false
+
+[[skills.config]]
+path = "/Users/rajchopra/developer/thorin/.agents/skills/oneshot-ultra/SKILL.md"
+enabled = false
+
+[[skills.config]]
+path = "/Users/rajchopra/developer/thorin/.agents/skills/review-pr/SKILL.md"
+enabled = false
+
+[[skills.config]]
+path = "/Users/rajchopra/.codex/plugins/cache/openai-curated/github/3fdeeb49/skills/gh-address-comments/SKILL.md"
+enabled = false
+
+[[skills.config]]
+path = "/Users/rajchopra/.agents/skills/find-skills/SKILL.md"
+enabled = false
+
+[[skills.config]]
+path = "/Users/rajchopra/.agents/skills/sherlock/SKILL.md"
+enabled = false
+
+[[skills.config]]
+path = "/Users/rajchopra/.codex/plugins/cache/openai-primary-runtime/template-creator/26.630.12135/skills/template-creator/SKILL.md"
+enabled = false
+
+[[skills.config]]
+path = "/Users/rajchopra/.codex/skills/thermo-nuclear-code-quality-review/SKILL.md"
+enabled = false
+
+[[skills.config]]
+path = "/Users/rajchopra/.codex/skills/.system/imagegen/SKILL.md"
+enabled = false
+
+[[skills.config]]
+path = "/Users/rajchopra/.codex/skills/.system/plugin-creator/SKILL.md"
+enabled = false
+
+[[skills.config]]
+path = "/Users/rajchopra/.codex/skills/.system/openai-docs/SKILL.md"
+enabled = false
+
+[desktop]
+conversationDetailMode = "STEPS_COMMANDS"
+ambient-suggestions-enabled = false
+keepRemoteControlAwakeWhilePluggedIn = true
+followUpQueueMode = "queue"
+
+[desktop.open-in-target-preferences]
+global = "zed"
+
+[hooks.state]
+
+[hooks.state."/Users/rajchopra/.codex/hooks.json:stop:0:0"]
+trusted_hash = "sha256:2a436be5835ee96d1f6cfdf34737c47312ff4db7a5af22c149e88c6bbf9487c4"
+
+[hooks.state."/Users/rajchopra/.codex/hooks.json:stop:0:1"]
+trusted_hash = "sha256:9da64c5c8be625fb9e09bb8fca86c310ea8dabfcfa7d4c6c3786f8b64a34ea42"
+
+[hooks.state."/Users/rajchopra/developer/thorin/.codex/hooks.json:post_tool_use:0:0"]
+trusted_hash = "sha256:0ba83e1fc1aa4a38dca6c450c48304a296d38643f4f02affa8b21eb7f4f68f29"
+
+[hooks.state."/Users/rajchopra/developer/thorin/.codex/hooks.json:post_tool_use:1:0"]
+trusted_hash = "sha256:915b27b8314f27016bebfc0174cea7f4cf3f3d7dbbca51c8866f302a534415a1"
+
+[hooks.state."/Users/rajchopra/.codex/hooks.json:stop:1:0"]
+trusted_hash = "sha256:1a888b66e045f7f1f084dbe5d86ed21ac8a87721d9cf8a8c791b006739aa5fde"
