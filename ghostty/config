@@ -1,19 +1,29 @@
-#
 # --- your current config ---
-#
-theme = Kanagawa Wave
-#theme = GitHub Dark High Contrast
-#theme = GitHub Light High Contrast
+
+#theme = Kanagawa Wave
+#theme = Kanagawa Lotus
+theme = pierre-dark
+#theme = light:pierre-light,dark:pierre-dark
+#theme = light:Kanagawa Lotus,dark:Kanagawa Wave
+
+#theme = Kanso Zen
+#theme = Kanso Pearl
+#theme = Github Dark High Contrast
+#theme = Github Light High Contrast
+#theme = Vague
+#theme=poimandres
 
 keybind = shift+enter=text:\n
-font-family = Berkeley Mono
+keybind = ctrl+b=text:\x02
+#font-family = "Berkeley Mono"
+font-family = "Departure Mono"
 adjust-cell-height = 2
 background-opacity = 1
 #background-opacity = 0.9
-background-blur = true
+background-blur-radius = 23
 
-keybind = cmd+shift+j=new_split:right
-keybind = cmd+j=new_split:down
+keybind = cmd+j=new_split:right
+keybind = cmd+shift+j=new_split:down
 
 keybind = cmd+d=unbind
 keybind = cmd+shift+d=unbind
@@ -21,10 +31,10 @@ keybind = cmd+shift+p=unbind
 keybind = cmd+w=unbind
 keybind = cmd+z=unbind
 
-# --- make cmd+shift+w close only the focused pane/split ---
+# --- make ⌘⇧W close only the focused pane/split ---
 keybind = cmd+shift+w=close_surface
 
-#macos-titlebar-style = hidden
+macos-titlebar-style = hidden
 #window-decoration = auto
 window-padding-x = 2
 window-padding-y = 2

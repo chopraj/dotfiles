@@ -28,6 +28,8 @@ vim.opt.background = "dark"
 vim.opt.scrolloff = 8
 vim.opt.signcolumn = "yes"
 vim.opt.cmdheight = 0
+vim.opt.linebreak = true
+vim.opt.breakindent = true
 
 -- window splits
 vim.opt.splitright = true

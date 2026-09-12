@@ -3,7 +3,6 @@ return {
 	dependencies = { "nvim-tree/nvim-web-devicons" },
 	config = function()
 		local lualine = require("lualine")
-		local lazy_status = require("lazy.status") -- to configure lazy pending updates count
 
         local mode = {
             'mode',
@@ -12,13 +11,6 @@ return {
                 -- displays only the first character of the mode
                 return ' ' .. str
             end,
-        }
-
-        local diff = {
-            'diff',
-            colored = true,
-            symbols = { added = ' ', modified = ' ', removed = ' ' }, -- changes diff symbols
-            -- cond = hide_in_width,
         }
 
         local filename = {
@@ -48,19 +40,18 @@ return {
 			sections = {
                 lualine_a = { mode },
                 lualine_b = { branch },
-                lualine_c = { diff, filename },
-				lualine_x = {
-					{
-                        -- require("noice").api.statusline.mode.get,
-                        -- cond = require("noice").api.statusline.mode.has,
-						lazy_status.updates,
-						cond = lazy_status.has_updates,
-						color = { fg = "#ff9e64" },
-					},
-					-- { "encoding",},
-					-- { "fileformat" },
-					{ "filetype" },
-				},
+                lualine_c = { filename },
+				lualine_x = {},
+				lualine_y = {},
+				lualine_z = {},
+			},
+			inactive_sections = {
+				lualine_a = {},
+				lualine_b = {},
+				lualine_c = { filename },
+				lualine_x = {},
+				lualine_y = {},
+				lualine_z = {},
 			},
 		})
 	end,

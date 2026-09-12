@@ -14,6 +14,14 @@ vim.keymap.set("v", "<leader>/", "gc", { remap = true, desc = "Toggle comment" }
 -- Close current buffer
 vim.keymap.set("n", "<leader>w", "<cmd>bdelete<cr>", { desc = "Close current buffer" })
 
+vim.keymap.set("n", "H", "<cmd>bprevious<cr>", { desc = "Previous buffer" })
+vim.keymap.set("n", "L", "<cmd>bnext<cr>", { desc = "Next buffer" })
+
+vim.keymap.set("n", "<leader>uw", function()
+    vim.wo.wrap = not vim.wo.wrap
+    vim.notify("Word wrap " .. (vim.wo.wrap and "enabled" or "disabled"))
+end, { desc = "Toggle word wrap" })
+
 -- Hightlight yanking
 vim.api.nvim_create_autocmd("TextYankPost", {
     desc = "Highlight when yanking (copying) text",

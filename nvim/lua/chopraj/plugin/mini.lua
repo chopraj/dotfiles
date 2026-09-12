@@ -1,5 +1,13 @@
 return {
-	{"echasnovski/mini.nvim", version = false },
+	{
+		"echasnovski/mini.nvim",
+		version = false,
+		config = function()
+			require("mini.tabline").setup({
+				tabpage_section = "none",
+			})
+		end,
+	},
 	{
         'echasnovski/mini.comment',
         version = false,

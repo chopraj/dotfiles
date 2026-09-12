@@ -1,11 +1,14 @@
-model = "gpt-5.6-sol"
-model_reasoning_effort = "max"
-plan_mode_reasoning_effort = "max"
+model = "gpt-6-astra"
+model_verbosity = "low"
+model_reasoning_effort = "xhigh"
+plan_mode_reasoning_effort = "high"
 personality = "pragmatic"
 service_tier = "fast"
 approvals_reviewer = "user"
 
 notify = ["/Users/rajchopra/.codex/computer-use/Codex Computer Use.app/Contents/SharedSupport/SkyComputerUseClient.app/Contents/MacOS/SkyComputerUseClient", "turn-ended"]
+approval_policy = "never"
+sandbox_mode = "danger-full-access"
 
 [projects."/Users/rajchopra/developer/thorin"]
 trust_level = "trusted"
@@ -34,6 +37,36 @@ trust_level = "trusted"
 [projects."/Users/rajchopra/Documents/Codex/2026-06-30/there-s-a-uh-github-action"]
 trust_level = "trusted"
 
+[projects."/Users/rajchopra/developer/arkenstone"]
+trust_level = "trusted"
+
+[projects."/Users/rajchopra/developer/portfolio"]
+trust_level = "trusted"
+
+[projects."/Users/rajchopra/Documents/Codex/2026-08-29/there-is-another-codex-sesssion-that"]
+trust_level = "trusted"
+
+[projects."/Users/rajchopra/Documents/Codex/2026-08-29/can-you-look-at-the-most"]
+trust_level = "trusted"
+
+[projects."/Users/rajchopra/Documents/Codex/2026-08-29/i-need-you-to-do-the"]
+trust_level = "trusted"
+
+[projects."/Users/rajchopra/Documents/Codex/2026-08-29/i-need-you-to-do-the-2"]
+trust_level = "trusted"
+
+[projects."/Users/rajchopra/Documents/Codex/2026-08-29/in-a-worktree-can-you-do"]
+trust_level = "trusted"
+
+[projects."/Users/rajchopra/Documents/Codex/2026-08-29/do-the-following-task-in-a"]
+trust_level = "trusted"
+
+[projects."/Users/rajchopra/Documents/Codex/2026-08-29/i-want-you-to-do-the"]
+trust_level = "trusted"
+
+[projects."/Users/rajchopra/Documents/Codex/2026-08-29/i-just-got-paged-can-you"]
+trust_level = "trusted"
+
 [notice]
 hide_gpt5_1_migration_prompt = true
 "hide_gpt-5.1-codex-max_migration_prompt" = true
@@ -50,22 +83,25 @@ js_repl = false
 memories = true
 
 hooks = true
+prevent_idle_sleep = true
 [tui]
 vim_mode_default = true
 status_line = ["model-with-reasoning", "context-remaining", "current-dir", "five-hour-limit", "git-branch", "branch-changes", "task-progress"]
-theme = "monokai-extended-bright"
+theme = "kanagawa"
 terminal_title = ["spinner", "project", "status", "thread", "git-branch", "model", "task-progress"]
 status_line_use_colors = true
 
 [tui.model_availability_nux]
 "gpt-5.5" = 4
 "gpt-5.6-sol" = 4
+gpt-6-astra = 4
+
+[tui.keymap.chat]
+decrease_reasoning_effort = "ctrl-shift-down"
+increase_reasoning_effort = "ctrl-shift-up"
 
 [plugins."github@openai-curated"]
 enabled = true
-
-[plugins."browser@openai-bundled"]
-enabled = false
 
 [plugins."typescript-lsp@claude-plugins-official"]
 enabled = false
@@ -83,7 +119,7 @@ enabled = false
 enabled = false
 
 [plugins."computer-use@openai-bundled"]
-enabled = false
+enabled = true
 
 [plugins."chrome@openai-bundled"]
 enabled = false
@@ -100,40 +136,66 @@ enabled = true
 [plugins."linear@openai-curated"]
 enabled = true
 
+[plugins."sites@openai-bundled"]
+enabled = true
+
+[plugins."visualize@openai-bundled"]
+enabled = true
+
+[plugins."browser@openai-bundled"]
+enabled = true
+
+[plugins."codex-app-tools@openai-bundled"]
+enabled = true
+
 [marketplaces.openai-bundled]
-last_updated = "2026-07-19T20:22:30Z"
 source_type = "local"
 source = "/Users/rajchopra/.codex/.tmp/bundled-marketplaces/openai-bundled"
 
 [marketplaces.claude-plugins-official]
-last_updated = "2026-07-21T00:54:21Z"
-last_revision = "9ddfad2e999789e0220cacaf359b64dd873e7d72"
+last_updated = "2026-08-30T22:26:02Z"
+last_revision = "ed404106fcd80ba98ecb7c851e531dcb626d13b7"
 source_type = "git"
 source = "https://github.com/anthropics/claude-plugins-official.git"
 
 [marketplaces.openai-primary-runtime]
-last_updated = "2026-07-01T12:15:31Z"
 source_type = "local"
 source = "/Users/rajchopra/.cache/codex-runtimes/codex-primary-runtime/plugins/openai-primary-runtime"
 
 [mcp_servers.node_repl]
 args = []
-command = "/Applications/Codex.app/Contents/Resources/cua_node/bin/node_repl"
+command = "/Applications/ChatGPT.app/Contents/Resources/cua_node/bin/node_repl"
 startup_timeout_sec = 120
 
 [mcp_servers.node_repl.env]
 NODE_REPL_NATIVE_PIPE_CONNECT_TIMEOUT_MS = "1000"
-NODE_REPL_NODE_MODULE_DIRS = "/Applications/Codex.app/Contents/Resources/cua_node/lib/node_modules"
-NODE_REPL_NODE_PATH = "/Applications/Codex.app/Contents/Resources/cua_node/bin/node"
-NODE_REPL_TRUSTED_CODE_PATHS = "/Users/rajchopra/.codex"
+NODE_REPL_NODE_MODULE_DIRS = "/Applications/ChatGPT.app/Contents/Resources/cua_node/lib/node_modules"
+NODE_REPL_NODE_PATH = "/Applications/ChatGPT.app/Contents/Resources/cua_node/bin/node"
+NODE_REPL_TRUSTED_CODE_PATHS = "/Users/rajchopra/.codex:/Applications/ChatGPT.app/Contents/Resources/cua_node/lib/node_modules"
 CODEX_HOME = "/Users/rajchopra/.codex"
-NODE_REPL_TRUSTED_BROWSER_CLIENT_SHA256S = "60e4902788f207f88fd09344dfeafe07769488bdb2924bbb12b322c3b9d2b999"
 BROWSER_USE_AVAILABLE_BACKENDS = "chrome,iab"
+BROWSER_USE_TINYSKY_ENABLED = "0"
 NODE_REPL_INSTRUCTIONS_USE_CASE_BROWSER = "Control the in-app browser in conjunction with the Browser Plugin."
 NODE_REPL_INSTRUCTIONS_USE_CASE_CHROME = "Control the Chrome browser in conjunction with the Chrome Plugin. Prefer this method of controlling Chrome over alternatives (such as Computer Use) unless the user explicitly mentions an alternative."
+NODE_REPL_INSTRUCTIONS_USE_CASE_COMPUTER_USE = "Control desktop apps on macOS through Computer Use."
 BROWSER_USE_CODEX_APP_BUILD_FLAVOR = "prod"
-BROWSER_USE_CODEX_APP_VERSION = "26.623.101652"
-CODEX_CLI_PATH = "/Applications/Codex.app/Contents/Resources/codex"
+BROWSER_USE_CODEX_APP_VERSION = "26.903.61454"
+NODE_REPL_TRUSTED_SERVICES = '{"browser":"/Users/rajchopra/.codex/plugins/cache/openai-bundled/browser/26.903.61454/scripts/browser-service.mjs","sky":"@oai/sky/service"}'
+SKY_CUA_SERVICE_PATH = "/Users/rajchopra/.codex/computer-use/Codex Computer Use.app"
+CODEX_CLI_PATH = "/Applications/ChatGPT.app/Contents/Resources/codex"
+
+[mcp_servers.computer-use]
+command = "./Codex Computer Use.app/Contents/SharedSupport/SkyComputerUseClient.app/Contents/MacOS/SkyComputerUseClient"
+args = ["mcp"]
+cwd = "."
+enabled = false
+
+[mcp_servers.motherduck]
+url = "https://api.motherduck.com/mcp"
+
+[mcp_servers.cua_repl]
+command = "/Applications/ChatGPT.app/Contents/MacOS/ChatGPT"
+enabled = false
 
 [[skills.config]]
 path = "/Users/rajchopra/developer/thorin/.agents/skills/comment-review/SKILL.md"
@@ -200,13 +262,51 @@ path = "/Users/rajchopra/.codex/skills/.system/openai-docs/SKILL.md"
 enabled = false
 
 [desktop]
-conversationDetailMode = "STEPS_COMMANDS"
+conversationDetailMode = "STEPS_PROSE"
 ambient-suggestions-enabled = false
 keepRemoteControlAwakeWhilePluggedIn = true
 followUpQueueMode = "queue"
+dock-icon-preference = "app-default"
+appearanceLightCodeThemeId = "github"
+appearanceTheme = "dark"
+appearanceDarkCodeThemeId = "github"
+usePointerCursors = false
+git-branch-prefix = "raj/"
+git-pull-request-merge-method = "squash"
 
 [desktop.open-in-target-preferences]
 global = "zed"
+
+[desktop.appearanceLightChromeTheme]
+accent = "#0969da"
+contrast = 45
+ink = "#1f2328"
+opaqueWindows = true
+surface = "#ffffff"
+
+[desktop.appearanceLightChromeTheme.fonts]
+ui = "Inter"
+
+[desktop.appearanceLightChromeTheme.semanticColors]
+diffAdded = "#1a7f37"
+diffRemoved = "#cf222e"
+skill = "#8250df"
+
+[desktop.appearanceDarkChromeTheme]
+accent = "#1f6feb"
+contrast = 22
+ink = "#e6edf3"
+opaqueWindows = true
+surface = "#0d1117"
+
+[desktop.appearanceDarkChromeTheme.fonts]
+code = '"Departure Mono"'
+ui = '"Berkeley Mono"'
+
+[desktop.appearanceDarkChromeTheme.semanticColors]
+diffAdded = "#3fb950"
+diffRemoved = "#f85149"
+skill = "#bc8cff"
 
 [hooks.state]
 
@@ -224,3 +324,6 @@ trusted_hash = "sha256:915b27b8314f27016bebfc0174cea7f4cf3f3d7dbbca51c8866f302a5
 
 [hooks.state."/Users/rajchopra/.codex/hooks.json:stop:1:0"]
 trusted_hash = "sha256:1a888b66e045f7f1f084dbe5d86ed21ac8a87721d9cf8a8c791b006739aa5fde"
+
+[shell_environment_policy.set]
+NODE_REPL_TRUSTED_BROWSER_CLIENT_SHA256S = "9230e2bd8b24b7ac7a0ba6774c64bf0d78ecdabbdd91d0ed627b02a587bae2df"

@@ -32,6 +32,7 @@
 /atuin/atuin-receipt.json
 /zed/conversations/
 /zed/prompts/
+/zed/settings_backup.json
 /nvim/.claude/
 /nvim/.git/
 **/.DS_Store

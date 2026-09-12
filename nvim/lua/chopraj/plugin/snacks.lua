@@ -42,13 +42,6 @@ return {
 				end,
 				desc = "Toggle file tree (sidebar)",
 			},
-			{
-				"<leader>e",
-				function()
-					Snacks.explorer.reveal()
-				end,
-				desc = "Focus file tree & reveal current file",
-			},
 
 			-- Snacks Picker
 			{

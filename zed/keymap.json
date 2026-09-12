@@ -3,114 +3,114 @@
     "context": "Workspace",
     "bindings": {
       "cmd-b": "workspace::ToggleLeftDock",
-      "cmd-shift-g": "git_panel::ToggleFocus"
-    }
+      "cmd-shift-g": "git_panel::ToggleFocus",
+    },
   },
   {
     "context": "Editor",
     "bindings": {
-      "cmd-d": "editor::GoToDefinition"
-    }
-  },
-  {
-    "context": "Editor",
-    "unbind": {
-      "cmd-]": "editor::Indent"
-    }
+      "cmd-d": "editor::GoToDefinition",
+    },
   },
   {
     "context": "Editor",
     "unbind": {
-      "cmd-[": "editor::Outdent"
-    }
+      "cmd-]": "editor::Indent",
+    },
+  },
+  {
+    "context": "Editor",
+    "unbind": {
+      "cmd-[": "editor::Outdent",
+    },
   },
   {
     "bindings": {
-      "cmd-]": "window::ShowNextWindowTab"
-    }
+      "cmd-]": "window::ShowNextWindowTab",
+    },
   },
   {
     "bindings": {
-      "cmd-[": "window::ShowPreviousWindowTab"
-    }
+      "cmd-[": "window::ShowPreviousWindowTab",
+    },
   },
   {
     "context": "Workspace",
     "bindings": {
-      "cmd-[": "workspace::ActivatePreviousPane"
-    }
+      "cmd-[": "workspace::ActivatePreviousPane",
+    },
   },
   {
     "context": "Workspace",
     "bindings": {
-      "cmd-]": "workspace::ActivateNextPane"
-    }
+      "cmd-]": "workspace::ActivateNextPane",
+    },
   },
   {
     "context": "KeymapEditor",
     "unbind": {
-      "cmd-shift-c": "keymap_editor::CopyContext"
-    }
+      "cmd-shift-c": "keymap_editor::CopyContext",
+    },
   },
   {
     "unbind": {
-      "cmd-shift-c": "collab_panel::ToggleFocus"
-    }
+      "cmd-shift-c": "collab_panel::ToggleFocus",
+    },
   },
   {
     "context": "Editor",
     "unbind": {
-      "cmd-'": "editor::ToggleSelectedDiffHunks"
-    }
+      "cmd-'": "editor::ToggleSelectedDiffHunks",
+    },
   },
   {
     "bindings": {
-      "cmd-'": "editor::CollapseAllDiffHunks"
-    }
+      "cmd-'": "editor::CollapseAllDiffHunks",
+    },
   },
   {
     "bindings": {
-      "cmd-shift-c": "editor::CopyRelativePath"
-    }
+      "cmd-shift-c": "editor::CopyRelativePath",
+    },
   },
   {
     "context": "VimControl && !menu",
     "bindings": {
-      "space m": "editor::ToggleFold"
-    }
-  },
-  {
-    "context": "VimControl && !menu",
-    "unbind": {
-      "z a": "editor::ToggleFold"
-    }
-  },
-  {
-    "bindings": {
-      "cmd-shift-r": "editor::RestartLanguageServer"
-    }
-  },
-  {
-    "context": "Editor",
-    "bindings": {
-      "cmd-shift-d": "editor::GoToDefinitionSplit"
-    }
+      "space m": "editor::ToggleFold",
+    },
   },
   {
     "context": "VimControl && !menu",
     "unbind": {
-      "ctrl-w ctrl-]": "editor::GoToDefinitionSplit"
-    }
+      "z a": "editor::ToggleFold",
+    },
+  },
+  {
+    "bindings": {
+      "cmd-shift-r": "editor::RestartLanguageServer",
+    },
   },
   {
     "context": "Editor",
+    "bindings": {
+      "cmd-shift-d": "editor::GoToDefinitionSplit",
+    },
+  },
+  {
+    "context": "VimControl && !menu",
+    "unbind": {
+      "ctrl-w ctrl-]": "editor::GoToDefinitionSplit",
+    },
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "cmd-shift-u": "project_panel::CollapseAllEntries",
+    },
+  },
+  {
     "bindings": {
       "cmd-shift-u": "project_panel::CollapseAllEntries"
-    }
-  },
-  {
-    "bindings": {
-      "cmd-shift-u": "picker::ToMultiBuffer"
     }
   }
 ]
