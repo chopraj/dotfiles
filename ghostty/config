@@ -15,8 +15,7 @@ theme = pierre-dark
 
 keybind = shift+enter=text:\n
 keybind = ctrl+b=text:\x02
-#font-family = "Berkeley Mono"
-font-family = "Departure Mono"
+font-family = "Berkeley Mono"
 adjust-cell-height = 2
 background-opacity = 1
 #background-opacity = 0.9
