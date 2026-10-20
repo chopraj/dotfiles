@@ -7,28 +7,127 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "markdown_preview": {
+    "font_family": "Berkeley Mono"
+  },
+  "cursor_animation": {
+    "enabled": false
+  },
   "cli_default_open_behavior": "existing_window",
   "fullscreen_mode": "native",
   "global_lsp_settings": {
     "button": false,
   },
-  "ssh_connections": [
-    {
-      "host": "resfs.exe.xyz",
-      "args": [],
-      "projects": []
-    },
-    {
-      "host": "deslop.exe.xyz",
-      "args": [],
-      "projects": []
-    }
-  ],
   "cursor_shape": "bar",
-  "markdown_preview_font_family": "Berkeley Mono",
   "ui_font_weight": 450.0,
   "disable_ai": true,
   "format_on_save": "on",
+  "languages": {
+    "TypeScript": {
+      "formatter": {
+        "external": {
+          "command": "/bin/sh",
+          "arguments": [
+            "-c",
+            "exec /bin/sh \"$HOME/.config/zed/format-file.sh\" \"$1\"",
+            "zed-format",
+            "{buffer_path}"
+          ]
+        }
+      }
+    },
+    "TSX": {
+      "formatter": {
+        "external": {
+          "command": "/bin/sh",
+          "arguments": [
+            "-c",
+            "exec /bin/sh \"$HOME/.config/zed/format-file.sh\" \"$1\"",
+            "zed-format",
+            "{buffer_path}"
+          ]
+        }
+      }
+    },
+    "JavaScript": {
+      "formatter": {
+        "external": {
+          "command": "/bin/sh",
+          "arguments": [
+            "-c",
+            "exec /bin/sh \"$HOME/.config/zed/format-file.sh\" \"$1\"",
+            "zed-format",
+            "{buffer_path}"
+          ]
+        }
+      }
+    },
+    "JSX": {
+      "formatter": {
+        "external": {
+          "command": "/bin/sh",
+          "arguments": [
+            "-c",
+            "exec /bin/sh \"$HOME/.config/zed/format-file.sh\" \"$1\"",
+            "zed-format",
+            "{buffer_path}"
+          ]
+        }
+      }
+    },
+    "JSON": {
+      "formatter": {
+        "external": {
+          "command": "/bin/sh",
+          "arguments": [
+            "-c",
+            "exec /bin/sh \"$HOME/.config/zed/format-file.sh\" \"$1\"",
+            "zed-format",
+            "{buffer_path}"
+          ]
+        }
+      }
+    },
+    "JSONC": {
+      "formatter": {
+        "external": {
+          "command": "/bin/sh",
+          "arguments": [
+            "-c",
+            "exec /bin/sh \"$HOME/.config/zed/format-file.sh\" \"$1\"",
+            "zed-format",
+            "{buffer_path}"
+          ]
+        }
+      }
+    },
+    "CSS": {
+      "formatter": {
+        "external": {
+          "command": "/bin/sh",
+          "arguments": [
+            "-c",
+            "exec /bin/sh \"$HOME/.config/zed/format-file.sh\" \"$1\"",
+            "zed-format",
+            "{buffer_path}"
+          ]
+        }
+      }
+    },
+    "Markdown": {
+      "formatter": {
+        "external": {
+          "command": "/bin/sh",
+          "arguments": [
+            "-c",
+            "exec /bin/sh \"$HOME/.config/zed/format-file.sh\" \"$1\"",
+            "zed-format",
+            "{buffer_path}"
+          ]
+        }
+      }
+    }
+  },
   "excerpt_context_lines": 3,
   "expand_excerpt_lines": 7,
   "vertical_scroll_margin": 50.0,
@@ -125,7 +224,7 @@
     "button": true,
   },
   "terminal": {
-    "font_family": "Departure Mono",
+    "font_family": "Berkeley Mono",
     "dock": "bottom",
     "show_count_badge": true,
     "button": false,
@@ -152,9 +251,9 @@
     "custom": 1.600000023841858
   },
   "project_panel": {
+    "folder_indicator": "icon",
     "starts_open": false,
     "file_icons": true,
-    "folder_icons": true,
     "indent_guides": {
       "show": "never",
     },
@@ -234,8 +333,8 @@
   "buffer_font_size": 16.0,
   "theme": {
     "mode": "dark",
-    "light": "Kanagawa Lotus - No Italics",
-    "dark": "Pierre Dark Soft",
+    "light": "GitHub Light",
+    "dark": "Kanagawa Wave",
   },
   "theme_overrides": {
     "Vague": {

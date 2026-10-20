@@ -1,6 +1,6 @@
 model = "gpt-6-astra"
 model_verbosity = "low"
-model_reasoning_effort = "xhigh"
+model_reasoning_effort = "high"
 plan_mode_reasoning_effort = "high"
 personality = "pragmatic"
 service_tier = "fast"
@@ -10,72 +10,17 @@ notify = ["/Users/rajchopra/.codex/computer-use/Codex Computer Use.app/Contents/
 approval_policy = "never"
 sandbox_mode = "danger-full-access"
 
-[projects."/Users/rajchopra/developer/thorin"]
-trust_level = "trusted"
-
-[projects."/Users/rajchopra/.config/nvim"]
-trust_level = "trusted"
-
-[projects."/Users/rajchopra/developer/sitethorin"]
-trust_level = "trusted"
-
-[projects."/Users/rajchopra/developer/investment-retro"]
-trust_level = "trusted"
-
-[projects."/Users/rajchopra/roomba"]
-trust_level = "trusted"
-
-[projects."/Users/rajchopra"]
-trust_level = "trusted"
-
-[projects."/Users/rajchopra/.config/tmux"]
-trust_level = "trusted"
-
-[projects."/Users/rajchopra/.config"]
-trust_level = "trusted"
-
-[projects."/Users/rajchopra/Documents/Codex/2026-06-30/there-s-a-uh-github-action"]
-trust_level = "trusted"
-
-[projects."/Users/rajchopra/developer/arkenstone"]
-trust_level = "trusted"
-
-[projects."/Users/rajchopra/developer/portfolio"]
-trust_level = "trusted"
-
-[projects."/Users/rajchopra/Documents/Codex/2026-08-29/there-is-another-codex-sesssion-that"]
-trust_level = "trusted"
-
-[projects."/Users/rajchopra/Documents/Codex/2026-08-29/can-you-look-at-the-most"]
-trust_level = "trusted"
-
-[projects."/Users/rajchopra/Documents/Codex/2026-08-29/i-need-you-to-do-the"]
-trust_level = "trusted"
-
-[projects."/Users/rajchopra/Documents/Codex/2026-08-29/i-need-you-to-do-the-2"]
-trust_level = "trusted"
-
-[projects."/Users/rajchopra/Documents/Codex/2026-08-29/in-a-worktree-can-you-do"]
-trust_level = "trusted"
-
-[projects."/Users/rajchopra/Documents/Codex/2026-08-29/do-the-following-task-in-a"]
-trust_level = "trusted"
-
-[projects."/Users/rajchopra/Documents/Codex/2026-08-29/i-want-you-to-do-the"]
-trust_level = "trusted"
-
-[projects."/Users/rajchopra/Documents/Codex/2026-08-29/i-just-got-paged-can-you"]
-trust_level = "trusted"
-
 [notice]
 hide_gpt5_1_migration_prompt = true
 "hide_gpt-5.1-codex-max_migration_prompt" = true
 hide_full_access_warning = true
+hide_rate_limit_model_nudge = true
 
 [notice.model_migrations]
 "gpt-5.1-codex-max" = "gpt-5.2-codex"
 "gpt-5.3-codex" = "gpt-5.4"
 "gpt-5.4" = "gpt-5.5"
+"gpt-5.6-sol" = "gpt-6-sol"
 
 [features]
 shell_snapshot = true
@@ -90,15 +35,18 @@ status_line = ["model-with-reasoning", "context-remaining", "current-dir", "five
 theme = "kanagawa"
 terminal_title = ["spinner", "project", "status", "thread", "git-branch", "model", "task-progress"]
 status_line_use_colors = true
+screen_reader_detection_done = true
+fullscreen_transcript = true
+
+[tui.keymap.chat]
+decrease_reasoning_effort = "ctrl-shift-down"
+increase_reasoning_effort = "ctrl-shift-up"
 
 [tui.model_availability_nux]
 "gpt-5.5" = 4
 "gpt-5.6-sol" = 4
 gpt-6-astra = 4
-
-[tui.keymap.chat]
-decrease_reasoning_effort = "ctrl-shift-down"
-increase_reasoning_effort = "ctrl-shift-up"
+"gpt-6.1-sol" = 4
 
 [plugins."github@openai-curated"]
 enabled = true
@@ -136,9 +84,6 @@ enabled = true
 [plugins."linear@openai-curated"]
 enabled = true
 
-[plugins."sites@openai-bundled"]
-enabled = true
-
 [plugins."visualize@openai-bundled"]
 enabled = true
 
@@ -146,6 +91,12 @@ enabled = true
 enabled = true
 
 [plugins."codex-app-tools@openai-bundled"]
+enabled = true
+
+[plugins."code-review@openai-bundled"]
+enabled = true
+
+[plugins."unified-computer-use@openai-bundled"]
 enabled = true
 
 [marketplaces.openai-bundled]
@@ -173,16 +124,16 @@ NODE_REPL_NODE_MODULE_DIRS = "/Applications/ChatGPT.app/Contents/Resources/cua_n
 NODE_REPL_NODE_PATH = "/Applications/ChatGPT.app/Contents/Resources/cua_node/bin/node"
 NODE_REPL_TRUSTED_CODE_PATHS = "/Users/rajchopra/.codex:/Applications/ChatGPT.app/Contents/Resources/cua_node/lib/node_modules"
 CODEX_HOME = "/Users/rajchopra/.codex"
-BROWSER_USE_AVAILABLE_BACKENDS = "chrome,iab"
-BROWSER_USE_TINYSKY_ENABLED = "0"
-NODE_REPL_INSTRUCTIONS_USE_CASE_BROWSER = "Control the in-app browser in conjunction with the Browser Plugin."
-NODE_REPL_INSTRUCTIONS_USE_CASE_CHROME = "Control the Chrome browser in conjunction with the Chrome Plugin. Prefer this method of controlling Chrome over alternatives (such as Computer Use) unless the user explicitly mentions an alternative."
-NODE_REPL_INSTRUCTIONS_USE_CASE_COMPUTER_USE = "Control desktop apps on macOS through Computer Use."
+BROWSER_USE_AVAILABLE_BACKENDS = "chrome,iab,mcpapps"
+BROWSER_USE_TINYSKY_ENABLED = "1"
+NODE_REPL_INSTRUCTIONS_USE_CASE_BROWSER = ""
+NODE_REPL_INSTRUCTIONS_USE_CASE_CHROME = ""
+NODE_REPL_INSTRUCTIONS_USE_CASE_COMPUTER_USE = ""
 BROWSER_USE_CODEX_APP_BUILD_FLAVOR = "prod"
-BROWSER_USE_CODEX_APP_VERSION = "26.903.61454"
-NODE_REPL_TRUSTED_SERVICES = '{"browser":"/Users/rajchopra/.codex/plugins/cache/openai-bundled/browser/26.903.61454/scripts/browser-service.mjs","sky":"@oai/sky/service"}'
+BROWSER_USE_CODEX_APP_VERSION = "26.928.20755"
+NODE_REPL_TRUSTED_SERVICES = '{"browser":"/Users/rajchopra/.codex/plugins/cache/openai-bundled/browser/26.928.20755/scripts/browser-service.mjs","sky":"@oai/sky/service"}'
 SKY_CUA_SERVICE_PATH = "/Users/rajchopra/.codex/computer-use/Codex Computer Use.app"
-CODEX_CLI_PATH = "/Applications/ChatGPT.app/Contents/Resources/codex"
+CODEX_CLI_PATH = "/Applications/ChatGPT.app/Contents/Resources/codex-cli/CodexCLI.app/Contents/MacOS/codex"
 
 [mcp_servers.computer-use]
 command = "./Codex Computer Use.app/Contents/SharedSupport/SkyComputerUseClient.app/Contents/MacOS/SkyComputerUseClient"
@@ -192,10 +143,6 @@ enabled = false
 
 [mcp_servers.motherduck]
 url = "https://api.motherduck.com/mcp"
-
-[mcp_servers.cua_repl]
-command = "/Applications/ChatGPT.app/Contents/MacOS/ChatGPT"
-enabled = false
 
 [[skills.config]]
 path = "/Users/rajchopra/developer/thorin/.agents/skills/comment-review/SKILL.md"
@@ -285,7 +232,8 @@ opaqueWindows = true
 surface = "#ffffff"
 
 [desktop.appearanceLightChromeTheme.fonts]
-ui = "Inter"
+code = '"Berkeley Mono"'
+ui = '"Berkeley Mono"'
 
 [desktop.appearanceLightChromeTheme.semanticColors]
 diffAdded = "#1a7f37"
@@ -300,30 +248,13 @@ opaqueWindows = true
 surface = "#0d1117"
 
 [desktop.appearanceDarkChromeTheme.fonts]
-code = '"Departure Mono"'
+code = '"Berkeley Mono"'
 ui = '"Berkeley Mono"'
 
 [desktop.appearanceDarkChromeTheme.semanticColors]
 diffAdded = "#3fb950"
 diffRemoved = "#f85149"
 skill = "#bc8cff"
-
-[hooks.state]
-
-[hooks.state."/Users/rajchopra/.codex/hooks.json:stop:0:0"]
-trusted_hash = "sha256:2a436be5835ee96d1f6cfdf34737c47312ff4db7a5af22c149e88c6bbf9487c4"
-
-[hooks.state."/Users/rajchopra/.codex/hooks.json:stop:0:1"]
-trusted_hash = "sha256:9da64c5c8be625fb9e09bb8fca86c310ea8dabfcfa7d4c6c3786f8b64a34ea42"
-
-[hooks.state."/Users/rajchopra/developer/thorin/.codex/hooks.json:post_tool_use:0:0"]
-trusted_hash = "sha256:0ba83e1fc1aa4a38dca6c450c48304a296d38643f4f02affa8b21eb7f4f68f29"
-
-[hooks.state."/Users/rajchopra/developer/thorin/.codex/hooks.json:post_tool_use:1:0"]
-trusted_hash = "sha256:915b27b8314f27016bebfc0174cea7f4cf3f3d7dbbca51c8866f302a534415a1"
-
-[hooks.state."/Users/rajchopra/.codex/hooks.json:stop:1:0"]
-trusted_hash = "sha256:1a888b66e045f7f1f084dbe5d86ed21ac8a87721d9cf8a8c791b006739aa5fde"
 
 [shell_environment_policy.set]
 NODE_REPL_TRUSTED_BROWSER_CLIENT_SHA256S = "9230e2bd8b24b7ac7a0ba6774c64bf0d78ecdabbdd91d0ed627b02a587bae2df"

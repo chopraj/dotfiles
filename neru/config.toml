@@ -27,7 +27,7 @@ enabled = false
 [recursive_grid]
 grid_cols = 2
 grid_rows = 2
-keys = "dkfj"
+keys = "rufj"
 
 min_size_height = 1
 min_size_width = 1

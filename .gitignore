@@ -36,3 +36,6 @@
 /nvim/.claude/
 /nvim/.git/
 **/.DS_Store
+
+# Keep local configuration backups out of the repository.
+**/*.bak
